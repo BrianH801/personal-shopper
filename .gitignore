@@ -1,0 +1,8 @@
+# ignore all the files with extensions css
+*.css.map
+# ignore DS Store
+*.DS_Store
+# ignore all the node_module files
+*.node_modules
+# ignore all the .env files
+*.env

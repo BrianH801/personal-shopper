@@ -30,6 +30,31 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get(`/shoppinglists`, (req, res) => {
+  connection.query('SELECT * FROM shoppinglists', (err, data) => {
+    if (err) throw err;
+    if (!data.length) {
+      res.json({ message: 'no data' });
+    }
+    res.json({ data });
+  });
+});
+
+app.get(`/shoppinglists/:id`, (req, res) => {
+  const { id } = req.params;
+  connection.query(
+    `SELECT * FROM shoppinglists WHERE shoppinglists.id = ${id}`,
+    (err, data) => {
+      if (err) throw err;
+      if (!data.length) {
+        res.json({ message: 'no data' });
+      } else {
+        res.json({ data });
+      }
+    }
+  );
+});
+
 app.get(`/users`, (req, res) => {
   connection.query('SELECT * FROM users', (err, data) => {
     if (err) throw err;
@@ -42,15 +67,19 @@ app.get(`/users`, (req, res) => {
 
 app.get(`/users/:id`, (req, res) => {
   const { id } = req.params;
+
   connection.query(
-    `SELECT * FROM users WHERE users.id = ${id}`,
+    `SELECT * FROM users WHERE user.id = ${id};
+     SELECT * FROM shoppinglists WHERE shoppinglists.user_id = ${id};`,
     (err, data) => {
       if (err) throw err;
-      if (!data.length) {
-        res.json({ message: 'no data' });
+      if (data[0].length && data[1].length) {
+        res.json({ user: data[0], shoppinglist: data[1] });
       } else {
-        res.json({ data });
+        res.json({ message: 'no data' });
       }
     }
   );
 });
+
+app.listen(5000, console.log(`http://localhost:5000`));
