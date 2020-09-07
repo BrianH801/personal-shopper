@@ -1,10 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
+const axios = require('axios');
+const SpoonacularApi = require('spoonacular_api');
 const app = express();
 
 // grab .env variables
-const { HOST, DB_USER, PASSWORD, DB } = process.env;
+const { HOST, DB_USER, PASSWORD, DB, API_KEY } = process.env;
 
 app.use(express.json());
 
@@ -22,6 +24,18 @@ connection.connect((err) => {
   if (err) throw err;
   console.log(`db connected ✅`);
 });
+
+const api = new SpoonacularApi.DefaultApi();
+const q = '';
+const callback = function (error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. returned data: ' + data);
+  }
+  console.log(q);
+  api.analyzeARecipeSearchQuery(q, callback);
+};
 
 app.get('/', (req, res) => {
   res.json({
