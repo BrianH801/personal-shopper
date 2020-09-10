@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-// const logger = require('./middleware/logger);
 const cors = require('cors');
+const dotenv = require('dotenv');
 const mysql = require('mysql');
 const knex = require('./knexfile');
 
@@ -9,17 +9,18 @@ const app = express();
 
 const shopperRoute = require('./routes/shopper');
 const shoppinglistRoute = require('./routes/shoppinglist');
+require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
 
 // cors support
 app.use(cors());
 
-// init middleware
-// app.user(logger);
+require('dotenv').config();
 
 //body parser
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/shopper', shopperRoute);

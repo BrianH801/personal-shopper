@@ -12,7 +12,7 @@ function Shoppers({
   return (
     <li className='shopper__id' id={id}>
       <div className='shopper__name'>
-        <h4>{name}</h4>
+        <h4>{name}Hello</h4>
       </div>
       <div className='shopper__address'>
         <p>{address}</p>

@@ -3,7 +3,7 @@ import Shoppers from './Shoppers';
 
 function ShoppersList(props) {
   console.log('Shopperslist props', props);
-  if (props.shopper === undefined) {
+  if (props.shoppers === undefined) {
     return <p>Loading Shoppers</p>;
   }
 
@@ -16,7 +16,7 @@ function ShoppersList(props) {
             name={shopper.name}
             address={shopper.address}
             phone={shopper.phone}
-            emaail={shopper.email}
+            email={shopper.email}
             credit_card={shopper.credit_card}
             expiry_date={shopper.expiry_date}
           />
