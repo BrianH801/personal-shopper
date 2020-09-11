@@ -56,12 +56,22 @@ class ShoppersPage extends Component {
   }
 
   validateData(event) {
+    console.log(event);
     const name = event.target.name.value;
     const address = event.target.address.value;
     const phone = event.target.phone.value;
     const email = event.target.email.value;
+    const credit_card = event.target.credit_card.value;
+    const expiry_date = event.target.expiry_date.value;
 
-    return !!name && !!address && !!phone && !!email;
+    return (
+      !!name &&
+      !!address &&
+      !!phone &&
+      !!email &&
+      !!credit_card &&
+      !!expiry_date
+    );
   }
 
   handleFormSubmit(event) {
