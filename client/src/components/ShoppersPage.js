@@ -74,7 +74,7 @@ class ShoppersPage extends Component {
     );
   }
 
-  handleFormSubmit(event) {
+  handleFormSubmit = (event) => {
     event.preventDefault();
 
     const isDataValid = this.validateData(event);
@@ -98,7 +98,7 @@ class ShoppersPage extends Component {
       });
       event.target.reset();
     }
-  }
+  };
   render() {
     return (
       <>
