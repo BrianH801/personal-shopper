@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ShoppingList from './ShoppingList/ShoppingList';
-import { API_KEY } from '../env/process.env';
 
 const API_URL =
   process.env.NODE_ENV === 'production'
@@ -22,7 +21,7 @@ class ShoppingListPage extends Component {
 
   getShoppers = () => {
     axios
-      .get(`${API_URL}/api/shoppinglist`)
+      .get(`${API_URL}/api/shopper`)
       .then((response) => {
         console.log(response);
         this.setState({
@@ -47,11 +46,11 @@ class ShoppingListPage extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <>
         <div className='container'>
           <ShoppingList shoppinglists={this.state.shoppinglists} />
         </div>
-      </div>
+      </>
     );
   }
 }

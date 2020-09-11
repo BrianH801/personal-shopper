@@ -1,0 +1,43 @@
+body {
+  background: #fafafa;
+}
+
+//Note to Marker
+//I think you might notice this time around a little
+//improvement in my application of BEM. This is
+//primarily due to Nelson, Bahareh and Jim since I was convinced
+//that BEM and SASS really don't work, leading to much
+//frustration. Hey Guys I am sorry to report that I struggled with
+//trying to get the comments on the right side of the images in
+//the sidebar videos. Unfortunately I just ran out of time. The other thing
+//that I struggled with as well is getting the comments count to load, but
+//I did get the Name and and the date to show up on the comments page
+//and I sort of got the grey avatar images on the page as well. I also tried
+//to destructure some of my Javascript Code from props in Banner and Video
+//Info so all in all I think a pretty good effort for where I am at
+//with this stuff.
+
+.column__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  // min-width media query for desktop breakpoint, see _mixins.scss
+
+  &__left {
+    width: 60%;
+    flex-direction: row;
+  }
+  &__list {
+    display: flex;
+  }
+  &__right {
+    width: 40%;
+    display: flex;
+  }
+}

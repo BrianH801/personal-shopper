@@ -2,21 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => (
-  <nav className='nav__container'>
-    <ul className='nav__inner-container'>
+  <ul className='nav__container container'>
+    <li className='nav__about'>
+      <Link to='/about'>About</Link>
+    </li>
+    <div className='nav__shopper-container'>
+      <li className='nav__shoppers-form'>
+        <Link to='/shoppersform'>Shoppers Form</Link>
+      </li>
       <li className='nav__shoppers'>
-        <Link to='/'>ShoppersForm</Link>
+        <Link to='/shopperspage'>Shopper Info</Link>
       </li>
-      <li className='nav__about'>
-        <Link to='/About'>About</Link>
+      <li className='nav__shoppinglist-form'>
+        <Link to='/shoppinglistform'>Shopping List Form</Link>
       </li>
-      <li className='nav-contact-form'>
-        <Link to='/contactForm'>Contact</Link>
+      <li className='nav__shoppinglists'>
+        <Link to='/shoppinglistpage'>Shopping List</Link>
       </li>
-      <li className='nav-resume'>
-        <Link to='/Resume'>Resume</Link>
-      </li>
-    </ul>
-  </nav>
+    </div>
+  </ul>
 );
 export default NavBar;
