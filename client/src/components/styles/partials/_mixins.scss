@@ -10,3 +10,9 @@
     @content;
   }
 }
+
+@mixin border($side) {
+  // not the syntax #{} allows you to use a variable to build a string:
+  // e.g. border-top, border-right, border-bottom, border-left
+  border-#{$side}: 1px solid darken($lightest-color, 10%);
+}

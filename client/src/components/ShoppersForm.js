@@ -97,45 +97,52 @@ class ShoppersForm extends Component {
   render() {
     return (
       <>
-        <div className='container'>
-          <form id='ShoppersForm' onSubmit={this.handleFormSubmit}>
+        <div className='shoppers__container container'>
+          <div className='shoppers__title'>
+            <h2>Edit Shopper</h2>
+          </div>
+          <form
+            id='ShoppersForm'
+            className='shoppers__form'
+            onSubmit={this.handleFormSubmit}
+          >
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='name'
               placeholder='Input Name'
             />
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='address'
               placeholder='Input Address'
             />
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='phone'
               placeholder='Input Phone Number'
             />
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='email'
               placeholder='Input Email Address'
             />
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='credit_card'
               placeholder='Input Credit Card Information'
             />
             <input
-              className='Shoppers__input'
+              className='shoppers__input'
               type='text'
               name='expiry_date'
               placeholder='Input Expiry Date'
             />
-            <div className='upload__button-container'>
+            <div className='shoppers__button-container'>
               <button type='submit'>Add</button>
               <button
                 type='button'

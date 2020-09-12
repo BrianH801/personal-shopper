@@ -86,39 +86,42 @@ class ShoppingListForm extends Component {
   render() {
     return (
       <>
-        <div className='container'>
+        <div className='shoppinglist__container'>
+          <div className='shoppinglist__title'>
+            <h2>Edit Shoppinglist</h2>
+          </div>
           <form id='ShoppinglistForm' onSubmit={this.handleFormSubmit}>
             <input
-              className='Shoppinglist__input'
+              className='shoppinglist__input'
               type='text'
               name='description'
-              placeholder='Input the Description'
+              placeholder='Input s Description'
             />
             <input
-              className='Shopperinglist__input'
+              className='shoppinglist__input'
               type='number'
               name='price'
-              placeholder='Input the Price'
+              placeholder='Input a Price'
             />
             <input
-              className='Shopperinglist__input'
+              className='shoppinglist__input'
               type='integer'
               name='quantity'
-              placeholder='Input the Quantity'
+              placeholder='Input a Quantity'
             />
             <input
-              className='Shopperinglist__input'
+              className='shoppinglist__input'
               type='text'
               name='flyer_item'
-              placeholder='Input if a flyer item'
+              placeholder='Input a flyer item'
             />
             <input
-              className='Shopperinglist__input'
+              className='shoppinglist__input'
               type='integer'
               name='shopper_id'
-              placeholder='Input if a flyer item'
+              placeholder='Input shopper_id'
             />
-            <div className='upload__button-container'>
+            <div className='shoppinglist__button-container'>
               <button type='submit'>Add</button>
               <button
                 type='button'

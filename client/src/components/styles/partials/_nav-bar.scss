@@ -1,31 +1,59 @@
 .nav {
   &__container {
     display: flex;
-    justify-content: space-between;
-    max-height: 10%;
-    max-width: 100%;
-  }
-  @include tablet {
+    // justify-content: center;
+    // align-items: center;
+    font-family: 'AvenirNext LT Pro';
+    position: sticky;
+    top: 0;
+    width: 100%;
+    // height: 10%;
+    background: lightgreen;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+      //flex-wrap: wrap;
+    }
+
+    @include desktop {
+      //flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__home {
+    display: flex;
+    width: 10%;
+    list-style-type: none;
   }
 
   &__about {
-    max-width: 250px;
-    list-style-type: none;
-  }
-
-  &__shopper-container {
     display: flex;
-    width: 50%;
-  }
-
-  &__shoppers {
-    width: 25%;
+    max-width: 10%;
     list-style-type: none;
   }
-  &__shoppinglists {
-    width: 25%;
+
+  &__shoppers-form {
+    display: flex;
+    width: 20%;
+    list-style-type: none;
+  }
+  &__shoppers {
+    display: flex;
+    width: 20%;
+    list-style-type: none;
+  }
+
+  &__shoppinglist-form {
+    display: flex;
+    width: 20%;
+    list-style-type: none;
+  }
+  &__shoppinglist {
+    display: flex;
+    width: 20%;
     list-style-type: none;
   }
 }

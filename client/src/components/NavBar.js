@@ -2,11 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => (
-  <ul className='nav__container container'>
-    <li className='nav__about'>
-      <Link to='/about'>About</Link>
-    </li>
-    <div className='nav__shopper-container'>
+  <nav>
+    <ul className='nav__container'>
+      <li className='nav__home'>
+        <Link to='/'>Home</Link>
+      </li>
+      <li className='nav__about'>
+        <Link to='/about'>About</Link>
+      </li>
+
       <li className='nav__shoppers-form'>
         <Link to='/shoppersform'>Shoppers Form</Link>
       </li>
@@ -16,10 +20,10 @@ const NavBar = () => (
       <li className='nav__shoppinglist-form'>
         <Link to='/shoppinglistform'>Shopping List Form</Link>
       </li>
-      <li className='nav__shoppinglists'>
+      <li className='nav__shoppinglist'>
         <Link to='/shoppinglistpage'>Shopping List</Link>
       </li>
-    </div>
-  </ul>
+    </ul>
+  </nav>
 );
 export default NavBar;
