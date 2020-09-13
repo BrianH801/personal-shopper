@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     width: 25%;
     color: white;
-    background-color: #0095ff;
+    background-color: coral;
   }
 
   &__form {
@@ -48,12 +48,4 @@
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
   }
-}
-
-button {
-  width: 10rem;
-  height: 3.25rem;
-  border-radius: 0.125rem;
-  color: white;
-  background-color: #0095ff;
 }

@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     width: 25%;
     color: white;
-    background-color: #0095ff;
+    background-color: coral;
   }
 
   &__form {
@@ -23,8 +23,8 @@
     align-items: flex-start;
     justify-content: space-evenly;
     align-content: space-around;
-    min-width: 80%;
-    height: 40rem;
+    width: 80%;
+    height: 55vh;
   }
 
   &__input {
@@ -54,5 +54,5 @@ button {
   height: 3.25rem;
   border-radius: 0.125rem;
   color: white;
-  background-color: #0095ff;
+  background-color: coral;
 }

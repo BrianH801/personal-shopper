@@ -1,5 +1,5 @@
 import React from 'react';
-import Shoppers from './ShoppingListItems';
+import Shoppinglistitems from './ShoppingListItems';
 
 function ShoppingList(props) {
   console.log('Shoppinglists props', props);
@@ -11,12 +11,13 @@ function ShoppingList(props) {
     <ul>
       <>
         {props.shoppinglists.map((shoppinglist) => (
-          <Shoppers
+          <Shoppinglistitems
             key={shoppinglist.id}
             description={shoppinglist.description}
             quantity={shoppinglist.quantity}
             price={shoppinglist.price}
             flyer_item={shoppinglist.flyer_item}
+            shopper_id={shoppinglist.shopper_id}
           />
         ))}
       </>

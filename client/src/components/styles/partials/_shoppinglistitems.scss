@@ -1,0 +1,26 @@
+.shoppinglistitems {
+  &__container {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+  &__description {
+    display: flex;
+    list-style-type: none;
+    font-family: 'AvenirNext LT Pro';
+  }
+  &__quantity {
+    display: flex;
+    font-family: 'AvenirNext LT Pro';
+  }
+  &__price {
+    display: flex;
+    font-family: 'AvenirNext LT Pro';
+  }
+  &__flyer-item {
+    display: flex;
+    font-family: 'AvenirNext LT Pro';
+  }
+}

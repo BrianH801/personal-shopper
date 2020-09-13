@@ -1,14 +1,13 @@
 .nav {
   &__container {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: flex-start;
     font-family: 'AvenirNext LT Pro';
     position: sticky;
     top: 0;
     width: 100%;
     // height: 10%;
-    background: lightgreen;
+    background: coral;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -25,35 +24,35 @@
 
   &__home {
     display: flex;
-    width: 10%;
+    width: 15%;
     list-style-type: none;
   }
 
   &__about {
     display: flex;
-    max-width: 10%;
+    max-width: 15%;
     list-style-type: none;
   }
 
   &__shoppers-form {
     display: flex;
-    width: 20%;
+    width: 15%;
     list-style-type: none;
   }
   &__shoppers {
     display: flex;
-    width: 20%;
+    width: 15%;
     list-style-type: none;
   }
 
   &__shoppinglist-form {
     display: flex;
-    width: 20%;
+    width: 15%;
     list-style-type: none;
   }
   &__shoppinglist {
     display: flex;
-    width: 20%;
+    width: 15%;
     list-style-type: none;
   }
 }

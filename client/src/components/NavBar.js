@@ -10,15 +10,14 @@ const NavBar = () => (
       <li className='nav__about'>
         <Link to='/about'>About</Link>
       </li>
-
       <li className='nav__shoppers-form'>
-        <Link to='/shoppersform'>Shoppers Form</Link>
+        <Link to='/shoppersform'>Shoppers</Link>
       </li>
       <li className='nav__shoppers'>
         <Link to='/shopperspage'>Shopper Info</Link>
       </li>
       <li className='nav__shoppinglist-form'>
-        <Link to='/shoppinglistform'>Shopping List Form</Link>
+        <Link to='/shoppinglistform'>Shopping Form</Link>
       </li>
       <li className='nav__shoppinglist'>
         <Link to='/shoppinglistpage'>Shopping List</Link>
