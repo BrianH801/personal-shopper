@@ -86,41 +86,60 @@ class ShoppingListForm extends Component {
   render() {
     return (
       <>
-        <div className='shoppinglist__container'>
+        <div className='shoppinglist__container container'>
           <div className='shoppinglist__title'>
             <h2>Edit Shoppinglist</h2>
           </div>
-          <form id='ShoppinglistForm' onSubmit={this.handleFormSubmit}>
-            <input
-              className='shoppinglist__input'
-              type='text'
-              name='description'
-              placeholder='Input s Description'
-            />
-            <input
-              className='shoppinglist__input'
-              type='number'
-              name='price'
-              placeholder='Input a Price'
-            />
-            <input
-              className='shoppinglist__input'
-              type='integer'
-              name='quantity'
-              placeholder='Input a Quantity'
-            />
-            <input
-              className='shoppinglist__input'
-              type='text'
-              name='flyer_item'
-              placeholder='Input a flyer item'
-            />
-            <input
-              className='shoppinglist__input'
-              type='integer'
-              name='shopper_id'
-              placeholder='Input shopper_id'
-            />
+          <form
+            id='ShoppinglistForm'
+            className='shoppinglist__form'
+            onSubmit={this.handleFormSubmit}
+          >
+            <label className='shoppers__label'>
+              Description:
+              <input
+                className='shoppinglist__input'
+                type='text'
+                name='description'
+                placeholder='Input s Description'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Price:
+              <input
+                className='shoppinglist__input'
+                type='number'
+                name='price'
+                placeholder='Input a Price'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Quantity:
+              <input
+                className='shoppinglist__input'
+                type='integer'
+                name='quantity'
+                placeholder='Input a Quantity'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Flyer Item:
+              <input
+                className='shoppinglist__input'
+                type='text'
+                name='flyer_item'
+                placeholder='Input a flyer item'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Shopper Id:
+              <input
+                className='shoppinglist__input'
+                type='integer'
+                name='shopper_id'
+                placeholder='Input shopper_id'
+              />
+            </label>
             <div className='shoppinglist__button-container'>
               <button type='submit'>Add</button>
               <button

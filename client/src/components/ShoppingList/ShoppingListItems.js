@@ -9,11 +9,12 @@ function ShoppingListItems({
   shopper_id,
 }) {
   return (
-    <div className='shoppinglistitems__container'>
+    <ul className='shoppinglistitems__container container'>
       <li className='shoppinglistitems__id' id={id}>
         <div className='shoppinglistitems__description'>
           <h4>{description}</h4>
         </div>
+
         <div className='shoppinglistitems__quantity'>
           <p>{quantity}</p>
         </div>
@@ -27,7 +28,7 @@ function ShoppingListItems({
           <p>{shopper_id}</p>
         </div>
       </li>
-    </div>
+    </ul>
   );
 }
 export default ShoppingListItems;

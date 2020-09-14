@@ -1,11 +1,17 @@
 .about {
-  padding: 1rem;
   &__container {
     display: flex;
     height: 100vh;
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
   }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__paragraph {
     font-family: 'AvenirNext LT Pro';
     font-weight: normal;

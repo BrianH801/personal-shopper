@@ -1,35 +1,23 @@
 import React from 'react';
 
-function Shoppers({
-  id,
-  name,
-  address,
-  phone,
-  email,
-  credit_card,
-  expiry_date,
-}) {
+function Shoppers({ id, name, address, phone, email }) {
   return (
-    <li className='shopper__id' id={id}>
-      <div className='shopper__name'>
-        <h4>{name}Hello</h4>
-      </div>
-      <div className='shopper__address'>
-        <p>{address}</p>
-      </div>
-      <div className='shopper__phone'>
-        <p>{phone}</p>
-      </div>
-      <div className='shopper__email'>
-        <p>{email}</p>
-      </div>
-      <div className='shopper__credit_card'>
-        <p>{credit_card}</p>
-      </div>
-      <div className='shopper__expiry_date'>
-        <p>{expiry_date}</p>
-      </div>
-    </li>
+    <ul className='shopper__container container'>
+      <li className='shopper__id' id={id}>
+        <div className='shopper__name'>
+          <h4>{name}</h4>
+        </div>
+        <div className='shopper__address'>
+          <p>{address}</p>
+        </div>
+        <div className='shopper__phone'>
+          <p>{phone}</p>
+        </div>
+        <div className='shopper__email'>
+          <p>{email}</p>
+        </div>
+      </li>
+    </ul>
   );
 }
 export default Shoppers;

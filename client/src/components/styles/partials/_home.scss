@@ -7,24 +7,24 @@
     height: 100vh;
     width: 100vw;
     font-family: 'AvenirNext LT Pro';
+    position: relative;
   }
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
   }
   &__title {
+    position: absolute;
+    top: 10px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    display: flex;
-    width: 90%;
+    width: 75%;
   }
   &__peppers {
-    top: 10%;
-    width: 90%;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
-    position: relative;
+    border-radius: 5%;
+    width: 35%;
+    overflow: hidden;
   }
 }

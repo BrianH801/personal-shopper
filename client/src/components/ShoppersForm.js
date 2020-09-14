@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ShoppersList from './ShoppersList/ShoppersList';
-import { API_KEY } from '../env/process.env';
 
 const API_URL =
   process.env.NODE_ENV === 'production'
@@ -34,16 +32,16 @@ class ShoppersForm extends Component {
 
   updateShopper(postObj) {
     axios
-      .put(`http://localhost:5000/api/shopper`, postObj)
+      .put(`http://localhost:5000/api/shopper/:id`, postObj)
       .then((response) => {
-        console.log('This Shopper inf has been updated', response);
+        console.log('This Shopper info has been updated', response);
       })
       .catch((err) => console.log(err));
   }
 
   deleteShopper(postObj) {
     axios
-      .delete(`http://localhost:5000/api/shopper`, postObj)
+      .delete(`http://localhost:5000/api/shopper/:id`, postObj)
       .then((response) => {
         console.log('This Shopper has been deleted', response);
       })
@@ -56,17 +54,8 @@ class ShoppersForm extends Component {
     const address = event.target.address.value;
     const phone = event.target.phone.value;
     const email = event.target.email.value;
-    const credit_card = event.target.credit_card.value;
-    const expiry_date = event.target.expiry_date.value;
 
-    return (
-      !!name &&
-      !!address &&
-      !!phone &&
-      !!email &&
-      !!credit_card &&
-      !!expiry_date
-    );
+    return !!name && !!address && !!phone && !!email;
   }
 
   handleFormSubmit = (event) => {
@@ -80,16 +69,12 @@ class ShoppersForm extends Component {
       const address = event.target.address.value;
       const phone = event.target.phone.value;
       const email = event.target.email.value;
-      const credit_card = event.target.credit_card.value;
-      const expiry_date = event.target.expiry_date.value;
 
       this.addShopper({
         name: name,
         address: address,
         phone: phone,
         email: email,
-        credit_card: credit_card,
-        expiry_date: expiry_date,
       });
       event.target.reset();
     }
@@ -106,47 +91,56 @@ class ShoppersForm extends Component {
             className='shoppers__form'
             onSubmit={this.handleFormSubmit}
           >
-            <input
-              className='shoppers__input'
-              type='text'
-              name='name'
-              placeholder='Input Name'
-            />
-            <input
-              className='shoppers__input'
-              type='text'
-              name='address'
-              placeholder='Input Address'
-            />
-            <input
-              className='shoppers__input'
-              type='text'
-              name='phone'
-              placeholder='Input Phone Number'
-            />
-            <input
-              className='shoppers__input'
-              type='text'
-              name='email'
-              placeholder='Input Email Address'
-            />
-            <input
-              className='shoppers__input'
-              type='text'
-              name='credit_card'
-              placeholder='Input Credit Card Information'
-            />
-            <input
-              className='shoppers__input'
-              type='text'
-              name='expiry_date'
-              placeholder='Input Expiry Date'
-            />
+            <label className='shoppers__label'>
+              Shopper Id:
+              <input
+                className='shoppers__input'
+                type='integer'
+                name='id'
+                placeholder='Shopper id'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Name:
+              <input
+                className='shoppers__input'
+                type='text'
+                name='name'
+                placeholder='Input Name'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Address:
+              <input
+                className='shoppers__input'
+                type='text'
+                name='address'
+                placeholder='Input Address'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Phone:
+              <input
+                className='shoppers__input'
+                type='text'
+                name='phone'
+                placeholder='Input Phone Number'
+              />
+            </label>
+            <label className='shoppers__label'>
+              Email:
+              <input
+                className='shoppers__input'
+                type='text'
+                name='email'
+                placeholder='Input Email Address'
+              />
+            </label>
             <div className='shoppers__button-container'>
               <button type='submit'>Add</button>
               <button
                 type='button'
-                onClick={() => console.log('update shopper')}
+                onClick={(event) => this.updateShopper(event.target.value)}
               >
                 Update
               </button>

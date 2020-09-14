@@ -17,8 +17,6 @@ function ShoppersList(props) {
             address={shopper.address}
             phone={shopper.phone}
             email={shopper.email}
-            credit_card={shopper.credit_card}
-            expiry_date={shopper.expiry_date}
           />
         ))}
       </>

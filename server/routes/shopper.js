@@ -17,8 +17,6 @@ router
       address: req.body.address,
       phone: req.body.phone,
       email: req.body.email,
-      credit_card: req.body.credit_card,
-      expiry_date: req.body.expiry_date,
     })
       .save()
       .then((newShopper) => {
@@ -45,12 +43,6 @@ router
             address: req.body.address ? req.body.address : shopper.address,
             phone: req.body.phone ? req.body.phone : shopper.phone,
             email: req.body.email ? req.body.email : shopper.email,
-            credit_card: req.body.credit_card
-              ? req.body.credit_card
-              : shopper.credit_card,
-            expiry_date: req.body.expiry_date
-              ? req.body.expiry_date
-              : shopper.expiry_date,
           })
           .then((updatedShopper) => {
             res.status(200).json({ updatedShopper });
