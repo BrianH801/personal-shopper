@@ -35,15 +35,13 @@ body {
   -webkit-box-flex: wrap;
       -ms-flex: wrap;
           flex: wrap;
+  width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 100vh;
-  width: 100vw;
   font-family: 'AvenirNext LT Pro';
-  position: relative;
 }
 
 @media (min-width: 48rem) {
@@ -58,27 +56,16 @@ body {
 }
 
 .home__title {
-  position: absolute;
-  top: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 75%;
+  width: 100vw;
+  background: url("./assets/GreenPeppers.png");
 }
 
 .home__peppers {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 5%;
-  width: 35%;
-  overflow: hidden;
+  width: 100vh;
+  height: 100vh;
 }
 
 .container {

@@ -12,13 +12,6 @@ class ShoppingListForm extends Component {
     shoppinglists: [],
   };
 
-  componentDidMount() {
-    console.log('Component mounted');
-    this.addShoppinglists();
-    this.updateShoppinglists();
-    this.deleteShoppinglists();
-  }
-
   addShoppinglists(postObj) {
     axios
       .post(`http://localhost:5000/api/shoppinglist`, postObj)

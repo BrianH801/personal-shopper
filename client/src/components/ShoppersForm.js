@@ -15,10 +15,9 @@ class ShoppersForm extends Component {
 
   componentDidMount() {
     console.log('Component mounted');
-    this.addShopper();
-    this.addShopper();
-    this.updateShopper();
-    this.deleteShopper();
+    // this.addShopper();
+    // this.updateShopper();
+    // this.deleteShopper();
   }
 
   addShopper(postObj) {

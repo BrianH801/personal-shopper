@@ -8,9 +8,8 @@ function Home() {
         <div className='home__grocey-store'>Grocery Store</div>
         <div className='home__title'>
           <h1>Personal Shopper Prototype</h1>
-          <img src={GreenPeppers} alt='' />
+          <div className='home__peppers container'></div>
         </div>
-        <div className='home__peppers container'></div>
       </div>
     </>
   );
