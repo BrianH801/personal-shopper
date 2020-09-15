@@ -1,4 +1,5 @@
 import React from 'react';
+import Sunflower from './styles/assets/SunFlowers.png';
 
 function About() {
   return (
@@ -26,6 +27,7 @@ function About() {
           suspended order. If the client accepts the order, the order is closed
           and the items are delivered to the client.
         </p>
+
         <p>
           This Protoype is an attempt to try to help the volunteer shopper do
           their work in a more effecient manner.

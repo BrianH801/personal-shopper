@@ -8,18 +8,27 @@
     flex-direction: column;
   }
 
+  &__label {
+    width: 80%;
+    font-family: 'AvenirNext LT Pro';
+    font-weight: bold;
+    color: white;
+    background-color: #0095ff;
+  }
+
   &__title {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 25%;
     color: white;
-    background-color: coral;
+    background-color: #0095ff;
+    width: 25%;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
     align-content: space-around;
@@ -37,11 +46,10 @@
 
   &__button-container {
     display: flex;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
     // padding-right: 10%;
-
-    width: 100%;
+    border-radius: 0.2em;
+    width: 80%;
     height: 3.25rem;
     font-family: 'AvenirNext LT Pro';
     font-weight: bold;
@@ -51,7 +59,6 @@
 button {
   width: 10rem;
   height: 3.25rem;
-  border-radius: 0.125rem;
   color: white;
-  background-color: coral;
+  background-color: #0095ff;
 }

@@ -1,5 +1,5 @@
 body {
-  background: #6ea158;
+  background: #fafafa;
 }
 
 .site-wrapper {
@@ -32,16 +32,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: wrap;
-      -ms-flex: wrap;
-          flex: wrap;
   width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  font-family: 'AvenirNext LT Pro';
 }
 
 @media (min-width: 48rem) {
@@ -56,16 +54,17 @@ body {
 }
 
 .home__title {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100vw;
-  background: url("./assets/GreenPeppers.png");
+  height: 100vh;
+  color: white;
+  background: url("./assets/GreenPeppers.png") center/cover;
+  font-family: 'AvenirNext LT Pro';
+  text-align: center;
 }
 
-.home__peppers {
-  width: 100vh;
-  height: 100vh;
+.home__grocery-store {
+  color: white;
+  background-color: #0095ff;
 }
 
 .container {
@@ -98,12 +97,14 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: 'AvenirNext LT Pro';
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
-  background: #ffff7c;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -132,49 +133,54 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .nav__about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .nav__shoppers-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .nav__shoppers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .nav__shoppinglist-form {
-  background-color: #ffff7c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .nav__shoppinglist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 60px;
   list-style-type: none;
+  background-color: #0095ff;
 }
 
 .shopper__container {
@@ -307,6 +313,8 @@ body {
   width: 80%;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
+  color: white;
+  background-color: #0095ff;
 }
 
 .shoppers__title {
@@ -319,9 +327,9 @@ body {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 25%;
   color: white;
-  background-color: coral;
+  background-color: #0095ff;
+  width: 25%;
 }
 
 .shoppers__form {
@@ -360,11 +368,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.2em;
+  width: 80%;
   height: 3.25rem;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
@@ -388,6 +396,14 @@ body {
           flex-direction: column;
 }
 
+.shoppinglist__label {
+  width: 80%;
+  font-family: 'AvenirNext LT Pro';
+  font-weight: bold;
+  color: white;
+  background-color: #0095ff;
+}
+
 .shoppinglist__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,9 +414,9 @@ body {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 25%;
   color: white;
-  background-color: coral;
+  background-color: #0095ff;
+  width: 25%;
 }
 
 .shoppinglist__form {
@@ -411,6 +427,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -437,11 +455,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.2em;
+  width: 80%;
   height: 3.25rem;
   font-family: 'AvenirNext LT Pro';
   font-weight: bold;
@@ -450,12 +468,12 @@ body {
 button {
   width: 10rem;
   height: 3.25rem;
-  border-radius: 0.125rem;
   color: white;
-  background-color: coral;
+  background-color: #0095ff;
 }
 
 .about__container {
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,9 +492,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+  background-color: #0095ff;
 }
 
 .about__paragraph {
+  width: 90%;
   font-family: 'AvenirNext LT Pro';
   font-weight: normal;
   font-style: normal;

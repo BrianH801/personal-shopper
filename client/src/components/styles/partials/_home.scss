@@ -1,25 +1,25 @@
 .home {
   &__container {
     display: flex;
-    flex: wrap;
     width: 100vw;
+    height: 100vh;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    font-family: 'AvenirNext LT Pro';
   }
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
   }
   &__title {
-    justify-content: center;
     width: 100vw;
-
-    background: url('./assets/GreenPeppers.png');
-  }
-
-  &__peppers {
-    width: 100vh;
     height: 100vh;
+    color: white;
+    background: url('./assets/GreenPeppers.png') center/cover;
+    font-family: 'AvenirNext LT Pro';
+    text-align: center;
+  }
+  &__grocery-store {
+    color: white;
+    background-color: #0095ff;
   }
 }

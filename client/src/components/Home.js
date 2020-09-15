@@ -1,5 +1,4 @@
 import React from 'react';
-import GreenPeppers from './styles/assets/GreenPeppers.png';
 
 function Home() {
   return (
@@ -8,7 +7,7 @@ function Home() {
         <div className='home__grocey-store'>Grocery Store</div>
         <div className='home__title'>
           <h1>Personal Shopper Prototype</h1>
-          <div className='home__peppers container'></div>
+          <div className='home__peppers'></div>
         </div>
       </div>
     </>
