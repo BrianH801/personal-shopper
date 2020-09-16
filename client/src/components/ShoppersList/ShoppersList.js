@@ -8,19 +8,27 @@ function ShoppersList(props) {
   }
 
   return (
-    <ul>
-      <>
-        {props.shoppers.map((shopper) => (
-          <Shoppers
-            key={shopper.id}
-            name={shopper.name}
-            address={shopper.address}
-            phone={shopper.phone}
-            email={shopper.email}
-          />
-        ))}
-      </>
-    </ul>
+    <>
+      <div className='heading__labels'>
+        <span className='heading__span'>Name</span>{' '}
+        <span className='heading__span'>Address</span>{' '}
+        <span className='heading__span'>Phone</span>{' '}
+        <span className='heading__span'>Email</span>
+      </div>
+      <ul>
+        <>
+          {props.shoppers.map((shopper) => (
+            <Shoppers
+              key={shopper.id}
+              name={shopper.name}
+              address={shopper.address}
+              phone={shopper.phone}
+              email={shopper.email}
+            />
+          ))}
+        </>
+      </ul>
+    </>
   );
 }
 

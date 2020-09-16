@@ -102,6 +102,7 @@ class ShoppingListForm extends Component {
               <input
                 className='shoppinglist__input'
                 type='number'
+                step='0.01'
                 name='price'
                 placeholder='Input a Price'
               />

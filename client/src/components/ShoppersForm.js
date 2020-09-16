@@ -29,9 +29,9 @@ class ShoppersForm extends Component {
       .catch((err) => console.log(err));
   }
 
-  updateShopper(postObj) {
+  updateShopper(id) {
     axios
-      .put(`http://localhost:5000/api/shopper/:id`, postObj)
+      .put(`http://localhost:5000/api/shopper${id}`, {})
       .then((response) => {
         console.log('This Shopper info has been updated', response);
       })
@@ -137,10 +137,7 @@ class ShoppersForm extends Component {
             </label>
             <div className='shoppers__button-container'>
               <button type='submit'>Add</button>
-              <button
-                type='button'
-                onClick={(event) => this.updateShopper(event.target.value)}
-              >
+              <button type='button' onClick={() => this.updateShopper(4)}>
                 Update
               </button>
               <button
