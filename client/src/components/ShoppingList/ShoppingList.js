@@ -9,7 +9,7 @@ function ShoppingList(props) {
 
   return (
     <>
-      <div className='heading__labels'>
+      <div className='heading__labels container'>
         <span className='heading__span'>Description</span>{' '}
         <span className='heading__span'>Quantity</span>{' '}
         <span className='heading__span'>Price</span>{' '}

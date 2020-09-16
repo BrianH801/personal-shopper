@@ -89,6 +89,10 @@ body {
           box-sizing: border-box;
 }
 
+.nav a {
+  color: white !important;
+}
+
 .nav__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,102 +200,14 @@ body {
   background-color: #0095ff;
 }
 
-.shoppinglistitems__container {
+.shopper__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   list-style-type: none;
-}
-
-.shoppinglistitems__id {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.shoppinglistitems__name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  font-family: 'AvenirNext LT Pro';
-  width: 20%;
-}
-
-.shoppinglistitems__address {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'AvenirNext LT Pro';
-  width: 20%;
-}
-
-.shoppinglistitems__phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'AvenirNext LT Pro';
-  width: 20%;
-}
-
-.shoppinglistitems__email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'AvenirNext LT Pro';
-  width: 20%;
-}
-
-.heading__labels {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 2.5%;
-  font-family: 'AvenirNext LT Pro';
-}
-
-.heading__span {
-  color: white;
-  background-color: #0095ff;
-}
-
-.shopper__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style-type: none;
-}
-
-.shopper__label {
-  font-family: 'AvenirNext LT Pro';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 10%;
-}
-
-.shopper__id {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
 }
 
 .shopper__name {
@@ -300,7 +216,6 @@ body {
   display: flex;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
-  width: 30%;
 }
 
 .shopper__address {
@@ -309,7 +224,6 @@ body {
   display: flex;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
-  width: 30%;
 }
 
 .shopper__email {
@@ -318,7 +232,25 @@ body {
   display: flex;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
-  width: 30%;
+}
+
+.heading__labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 2.5%;
+  font-family: 'AvenirNext LT Pro';
+}
+
+.heading__span {
+  padding: 0.65rem;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #0095ff;
 }
 
 .shoppinglistitems__container {
