@@ -10,15 +10,11 @@ class ShoppersForm extends Component {
   state = {
     shoppers: [],
     shoppinglist: [],
-    signed_in: false,
+    shoppinglistEdit: '',
+    shopperToUpdate: '',
   };
 
-  componentDidMount() {
-    console.log('Component mounted');
-    // this.addShopper();
-    // this.updateShopper();
-    // this.deleteShopper();
-  }
+  componentDidMount() {}
 
   addShopper(postObj) {
     axios
@@ -31,16 +27,16 @@ class ShoppersForm extends Component {
 
   updateShopper(id) {
     axios
-      .put(`http://localhost:5000/api/shopper${id}`, {})
+      .post(`http://localhost:5000/api/shopper/${id}`, {})
       .then((response) => {
-        console.log('This Shopper info has been updated', response);
+        console.log('This went to the server', response);
       })
       .catch((err) => console.log(err));
   }
 
-  deleteShopper(postObj) {
+  deleteShopper(id) {
     axios
-      .delete(`http://localhost:5000/api/shopper/:id`, postObj)
+      .delete(`http://localhost:5000/api/shopper${id}`, {})
       .then((response) => {
         console.log('This Shopper has been deleted', response);
       })
@@ -78,12 +74,13 @@ class ShoppersForm extends Component {
       event.target.reset();
     }
   };
+
   render() {
     return (
       <>
         <div className='shoppers__container container'>
           <div className='shoppers__title'>
-            <h2>Edit Shopper</h2>
+            <h2>Add Shopper</h2>
           </div>
           <form
             id='ShoppersForm'
@@ -94,7 +91,7 @@ class ShoppersForm extends Component {
               Shopper Id:
               <input
                 className='shoppers__input'
-                type='integer'
+                type='text'
                 name='id'
                 placeholder='Shopper id'
               />
@@ -137,9 +134,13 @@ class ShoppersForm extends Component {
             </label>
             <div className='shoppers__button-container'>
               <button type='submit'>Add</button>
-              <button type='button' onClick={() => this.updateShopper(4)}>
+              <button
+                type='button'
+                onClick={() => console.log('update shopper')}
+              >
                 Update
               </button>
+
               <button
                 type='button'
                 onClick={() => console.log('delete shopper')}

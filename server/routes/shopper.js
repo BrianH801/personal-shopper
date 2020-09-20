@@ -33,6 +33,7 @@ router
         res.status(200).json(shopper);
       });
   })
+
   .put((req, res) => {
     Shopper.where('id', req.params.id)
       .fetch()
