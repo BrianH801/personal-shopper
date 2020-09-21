@@ -204,32 +204,53 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style-type: none;
 }
 
+.shopper__id {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  list-style-type: none;
+  font-family: 'AvenirNext LT Pro';
+}
+
 .shopper__name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
 }
 
 .shopper__address {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
+  list-style-type: none;
+  font-family: 'AvenirNext LT Pro';
+}
+
+.shopper__phone {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
 }
 
 .shopper__email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
 }
@@ -246,9 +267,13 @@ body {
 }
 
 .heading__span {
-  padding: 0.65rem;
-  display: inline-block;
-  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
   color: white;
   background-color: #0095ff;
 }
@@ -266,67 +291,51 @@ body {
 }
 
 .shoppinglistitems__id {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
+  list-style-type: none;
+  font-family: 'AvenirNext LT Pro';
 }
 
 .shoppinglistitems__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
   list-style-type: none;
   font-family: 'AvenirNext LT Pro';
-  width: 30%;
 }
 
 .shoppinglistitems__quantity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
   font-family: 'AvenirNext LT Pro';
-  width: 20%;
 }
 
 .shoppinglistitems__price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: start;
   font-family: 'AvenirNext LT Pro';
-  width: 20%;
 }
 
 .shoppinglistitems__flyer-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-family: 'AvenirNext LT Pro';
-  width: 20%;
 }
 
 .shoppinglistitems__shopper_id {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-family: 'AvenirNext LT Pro';
-  width: 20%;
-}
-
-.heading__labels {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 2.5%;
-  font-family: 'AvenirNext LT Pro';
-}
-
-.heading__span {
-  color: white;
-  background-color: #0095ff;
 }
 
 .shoppers__container {

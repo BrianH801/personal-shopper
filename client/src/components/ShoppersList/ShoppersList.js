@@ -10,6 +10,7 @@ function ShoppersList(props) {
   return (
     <>
       <div className='heading__labels container'>
+        <span className='heading__span'>Id</span>{' '}
         <span className='heading__span'>Name</span>{' '}
         <span className='heading__span'>Address</span>{' '}
         <span className='heading__span'>Phone</span>{' '}
@@ -20,6 +21,7 @@ function ShoppersList(props) {
           {props.shoppers.map((shopper) => (
             <Shoppers
               key={shopper.id}
+              id={shopper.id}
               name={shopper.name}
               address={shopper.address}
               phone={shopper.phone}

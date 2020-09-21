@@ -7,46 +7,33 @@
   }
 
   &__id {
-    display: flex;
-    width: 100%;
-  }
-
-  &__description {
-    display: flex;
+    flex: 1;
+    text-align: start;
     list-style-type: none;
     font-family: 'AvenirNext LT Pro';
-    width: 30%;
+  }
+  &__description {
+    flex: 1;
+    text-align: start;
+    list-style-type: none;
+    font-family: 'AvenirNext LT Pro';
   }
   &__quantity {
-    display: flex;
+    flex: 1;
+    text-align: start;
     font-family: 'AvenirNext LT Pro';
-    width: 20%;
   }
   &__price {
-    display: flex;
+    flex: 1;
+    text-align: start;
     font-family: 'AvenirNext LT Pro';
-    width: 20%;
   }
   &__flyer-item {
-    display: flex;
+    flex: 1;
     font-family: 'AvenirNext LT Pro';
-    width: 20%;
   }
   &__shopper_id {
-    display: flex;
+    flex: 1;
     font-family: 'AvenirNext LT Pro';
-    width: 20%;
-  }
-}
-.heading {
-  &__labels {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 2.5%;
-    font-family: 'AvenirNext LT Pro';
-  }
-  &__span {
-    color: white;
-    background-color: #0095ff;
   }
 }

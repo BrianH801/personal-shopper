@@ -1,22 +1,40 @@
 .shopper {
   &__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
   }
 
-  &__name {
-    display: flex;
+  &__id {
+    flex: 1;
+    text-align: center;
     list-style-type: none;
     font-family: 'AvenirNext LT Pro';
   }
+
+  &__name {
+    flex: 1;
+    text-align: start;
+    list-style-type: none;
+    font-family: 'AvenirNext LT Pro';
+  }
+
   &__address {
-    display: flex;
+    flex: 1;
+    text-align: start;
+    list-style-type: none;
+    font-family: 'AvenirNext LT Pro';
+  }
+
+  &__phone {
+    flex: 1;
+    text-align: center;
     list-style-type: none;
     font-family: 'AvenirNext LT Pro';
   }
   &__email {
-    display: flex;
+    flex: 1;
+    text-align: start;
     list-style-type: none;
     font-family: 'AvenirNext LT Pro';
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import lodash from 'lodash';
 
 const API_URL =
   process.env.NODE_ENV === 'production'
@@ -141,10 +142,7 @@ class ShoppersForm extends Component {
                 Update
               </button>
 
-              <button
-                type='button'
-                onClick={() => console.log('delete shopper')}
-              >
+              <button type='button' onClick={() => this.deleteShopper}>
                 Delete
               </button>
             </div>

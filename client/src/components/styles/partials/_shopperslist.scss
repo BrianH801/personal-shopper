@@ -6,9 +6,9 @@
     font-family: 'AvenirNext LT Pro';
   }
   &__span {
-    padding: 0.65rem;
-    display: inline-block;
-    text-decoration: none;
+    flex: 1;
+    justify-content: space-between;
+    padding: 1rem;
     color: white;
     background-color: #0095ff;
   }

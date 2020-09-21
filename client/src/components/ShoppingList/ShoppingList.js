@@ -10,6 +10,7 @@ function ShoppingList(props) {
   return (
     <>
       <div className='heading__labels container'>
+        <span className='heading__span'>Id</span>{' '}
         <span className='heading__span'>Description</span>{' '}
         <span className='heading__span'>Quantity</span>{' '}
         <span className='heading__span'>Price</span>{' '}
@@ -21,6 +22,7 @@ function ShoppingList(props) {
           {props.shoppinglists.map((shoppinglist) => (
             <Shoppinglistitems
               key={shoppinglist.id}
+              id={shoppinglist.id}
               description={shoppinglist.description}
               quantity={shoppinglist.quantity}
               price={shoppinglist.price}
